@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Talky",
+    "slug": "Talky",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Talky"
+}
