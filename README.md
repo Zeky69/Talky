@@ -1,5 +1,5 @@
 # Talky
 
- **Talky est une application de chat en temps réel.**
+**Talky est une application de chat en temps réel basée sur React Native et WebSockets.**
 
-Ce projet a été créé à des fins personnelles pour apprendre à utiliser React Native et les WebSockets.
+Cette version permet désormais l'envoi d'images et prend en charge un thème sombre automatique.

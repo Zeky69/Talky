@@ -23,12 +23,16 @@ wsServer.on('connection', function(connection) {
     console.log(`${userId} connected.`);
         // Gérer les messages entrants
         connection.on('message', function (message) {
-            // Vous pouvez traiter le message ici et envoyer une réponse si nécessaire
             console.log(`Message reçu de ${userId}: ${message}`);
-
-            // Par exemple, pour renvoyer le message à tous les clients connectés :
+            let payload;
+            try {
+                payload = JSON.parse(message);
+            } catch (err) {
+                payload = { type: 'text', content: message };
+            }
+            const data = JSON.stringify({ userId, ...payload });
             Object.values(clients).forEach(client => {
-                client.send(`${userId}: ${message}`);
+                client.send(data);
             });
         });
 
